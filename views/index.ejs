@@ -1,0 +1,280 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<main>
+  <section id="hero" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="eyebrow">Welcome Home</span>
+      <h1>Welcome to FRESHWORD MIRACLE CENTER INTERNATIONAL</h1>
+      <p>A place of worship, transformation, and purpose.</p>
+      <div class="hero-actions">
+        <a href="#sermons" class="btn btn-primary">Watch Sermons</a>
+        <a href="#services" class="btn btn-secondary">Join Us This Sunday</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section-light section-pad">
+    <div class="container">
+      <div class="section-heading">
+        <span>Service Times</span>
+        <h2>Worship and Prayer Schedule</h2>
+      </div>
+      <div class="grid cards-grid">
+        <article class="info-card">
+          <div class="card-icon">☀️</div>
+          <h3>Sunday Worship Service</h3>
+          <p>7:00 AM & 10:00 AM</p>
+          <p></p>
+        </article>
+        <article class="info-card">
+          <div class="card-icon">✨</div>
+          <h3>Counselling</h3>
+          <p>Wednesday  9:00 AM</p>
+          <!-- <p>Community Hall</p> -->
+        </article>
+        <article class="info-card">
+          <div class="card-icon">🙏</div>
+          <h3>Solution Hour</h3>
+          <p>Friday · 6:30 PM</p>
+          <!-- <p>Prayer Chapel</p> -->
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="location" class="section-dark section-pad">
+    <div class="container location-grid">
+      <div class="location-map">
+        <iframe
+          src="https://www.google.com/maps?q=2JP6%2B295,+Ado+961105,+Nasarawa&output=embed"
+          loading="lazy"
+          aria-label="Church location map"
+          style="border:0;width:100%;height:100%;"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="location-info">
+        <span>Visit Us</span>
+        <h2>FRESHWORD MIRACLE CENTER INTERNATIONA</h2>
+        <p>Headquarters police Affairs <br> After Aso B Primary School <br>ASO B MARARABA</p>
+        <p>Phone: +234 802 311 4840</p>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=2JP6%2B295%2C+Ado+961105%2C+Nasarawa" target="_blank" rel="noreferrer" class="btn btn-primary">Get Directions</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sermons" class="section-light section-pad">
+    <div class="container">
+      <div class="section-heading">
+        <span>Featured Sermons</span>
+        <h2>Watch the Latest Messages</h2>
+      </div>
+
+      <div id="videoBanner" class="video-banner" role="button" tabindex="0" aria-label="Play featured sermon">
+        <div class="banner-play">▶</div>
+        <div class="banner-copy">
+          <h3>Featured: By all Means kill the spirit of Gossiping</h3>
+          <p>Click to play the featured message</p>
+        </div>
+      </div>
+
+      <div class="video-section grid">
+        <div class="video-player-area">
+          <div class="video-controls">
+            <div class="video-toggle" role="tablist" aria-label="Video view mode">
+              <button class="mode-btn active" data-mode="interactive" aria-pressed="true">Interactive</button>
+              <button class="mode-btn" data-mode="classic" aria-pressed="false">Classic</button>
+            </div>
+            <div class="volume-controls" aria-label="Volume controls">
+              <button id="muteBtn" class="mute-btn" aria-pressed="false" title="Mute">🔊</button>
+              <input id="volumeSlider" class="volume-slider" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volume" />
+            </div>
+          </div>
+
+          <div class="video-player">
+            <video id="mainVideo" controls playsinline preload="metadata">
+              <source src="/vid/vid3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="video-meta">
+            <h3 id="videoTitle">By all Means kill the sprit of Gossiping</h3>
+            <p id="videoInfo">PROPHET JOHN KOLEDOYE</p>
+          </div>
+        </div>
+
+        <aside class="video-list" id="videoList" aria-label="Sermon list">
+          <article class="media-card thumb" data-src="/vid/vid3.mp4" data-title="Faith That Moves Mountains" data-info="
+          " tabindex="0">
+            <div class="media-thumb">▶</div>
+            <h4>Faith That Moves Mountains</h4>
+          </article>
+          <article class="media-card thumb" data-src="/vid/video.mp4" data-title="Hope in the Midst of Change" data-info="
+        " tabindex="0">
+            <div class="media-thumb">▶</div>
+            <h4>Hope in the Midst of Change</h4>
+          </article>
+          <article class="media-card thumb" data-src="/vid/fdi.mp4" data-title="Living a Life of Purpose" data-info="" tabindex="0">
+            <div class="media-thumb">▶</div>
+            <h4>Living a Life of Purpose</h4>
+          </article>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="events" class="section-pad">
+    <div class="container">
+      <div class="section-heading">
+        <span>Upcoming Events</span>
+        <h2>Reconnect, Worship, and Serve</h2>
+      </div>
+      <div class="grid cards-grid">
+        <article class="event-card">
+          <div class="event-date">
+            <strong>14</strong>
+            <span>Jun</span>
+          </div>
+          <h3>Youth Conference</h3>
+          <p>6:00 PM · Fellowship Center</p>
+          <a href="#" class="btn btn-outline">Register</a>
+        </article>
+        <article class="event-card">
+          <div class="event-date">
+            <strong>21</strong>
+            <span>Jun</span>
+          </div>
+          <h3>Worship Night</h3>
+          <p>7:30 PM · Main Sanctuary</p>
+          <a href="#" class="btn btn-outline">Register</a>
+        </article>
+        <article class="event-card">
+          <div class="event-date">
+            <strong>28</strong>
+            <span>Jun</span>
+          </div>
+          <h3>Community Outreach</h3>
+          <p>10:00 AM · City Park</p>
+          <a href="#" class="btn btn-outline">Register</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section-light section-pad">
+    <div class="container about-grid">
+      <div class="about-copy">
+        <span>About Our Church</span>
+        <h2>Mission, Vision, and Community Impact</h2>
+        <p>FRESHWORD MIRACLE CENTER INTERNATIONA is a faith community dedicated to spiritual growth, worship, and compassionate outreach. We welcome every generation to seek the presence of God, engage in service, and embrace life-changing renewal.</p>
+        <p>Our vision is to uplift families, inspire leaders, and strengthen the city with hope, prayer, and radical generosity.</p>
+      </div>
+      <!-- <div class="about-image"> -->
+        <img
+          src="/images/WhatsApp%20Image%202026-06-11%20at%206.00.15%20AM.jpeg"
+          alt="About image"
+          style="width:100%;height:auto;object-fit:cover; border-radius: 10px;"
+          onerror="this.onerror=null;this.src='/images/placeholder.svg'"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark section-pad pastor-section">
+    <div class="container pastor-grid">
+      <div class=""> 
+        <img
+          src="/images/papa.jpeg"
+          alt="Pastor image"
+          style="width:100%;height:auto;object-fit:cover; border-radius: 10px;"
+          onerror="this.onerror=null;this.src='/images/placeholder.svg'"
+        />
+      </div>
+      <div class="pastor-copy">
+        <span>Pastor's Welcome</span>
+        <h2>Message from PROPHET JOHN KOLEDOYE</h2>
+        <p>Welcome to FRESHWORD MIRACLE CENTER INTERNATIONAL. Our doors are open to people seeking peace, purpose, and an authentic encounter with Christ. Join us as we pursue revival, unity, and a faith that transforms everyday life.</p>
+        <p class="signature">— PROPHET JOHN KOLEDOYE</p>
+        <a href="#" class="btn btn-primary">Read Full Message</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad testimonials-section">
+    <div class="container">
+      <div class="section-heading">
+        <span>Stories of Change</span>
+        <h2>Member Testimonials</h2>
+      </div>
+      <div class="testimonial-slider-wrapper">
+        <button class="testimonial-btn prev" aria-label="Previous testimonial">◀</button>
+        <div class="testimonial-slider" id="testimonialSlider">
+          <div class="testimonial-track">
+            <article class="testimonial-card">
+              <p>"FRESHWORD MIRACLE CENTER INTERNATIONA helped our family grow in faith and experience real healing. The worship and teaching are truly uplifting."</p>
+              <div>
+                <strong>Anna M.</strong>
+                <span>Mother & volunteer</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <p>"The community here is warm, encouraging, and deeply committed to prayer. I found purpose and strong friendships."</p>
+              <div>
+                <strong>Daniel R.</strong>
+                <span>Student</span>
+              </div>
+            </article>
+            <!-- duplicate slides for seamless infinite effect -->
+            <article class="testimonial-card">
+              <p>"FRESHWORD MIRACLE CENTER INTERNATIONA helped our family grow in faith and experience real healing. The worship and teaching are truly uplifting."</p>
+              <div>
+                <strong>Anna M.</strong>
+                <span>Mother & volunteer</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <p>"The community here is warm, encouraging, and deeply committed to prayer. I found purpose and strong friendships."</p>
+              <div>
+                <strong>Daniel R.</strong>
+                <span>Student</span>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="testimonial-btn next" aria-label="Next testimonial">▶</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light section-pad donate-section">
+    <div class="container donate-grid">
+      <div>
+        <span>Give Online</span>
+        <h2>Partner with our mission through giving</h2>
+        <p>“Each one must give as he has decided in his heart, not reluctantly or under compulsion, for God loves a cheerful giver.” — 2 Corinthians 9:7</p>
+      </div>
+      <a href="#" class="btn btn-primary">Give Online</a>
+    </div>
+  </section>
+
+  <section id="prayer" class="section-dark section-pad prayer-section">
+    <div class="container prayer-grid">
+      <div>
+        <span>Prayer Request</span>
+        <h2>Let us pray with you</h2>
+        <p>Share your request and our prayer team will lift your needs before God with care and compassion.</p>
+      </div>
+      <form action="/prayer-request" method="POST" class="prayer-form">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="prayer" rows="5" placeholder="Your prayer request" required></textarea>
+        <button type="submit" class="btn btn-primary">Submit Prayer Request</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

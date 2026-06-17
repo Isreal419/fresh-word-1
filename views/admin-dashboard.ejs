@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <h1>Admin Dashboard</h1>
+    <button id="logout">Logout</button>
+
+    <section>
+      <h2>Sermons</h2>
+      <form id="sermon-form">
+        <input name="title" placeholder="Title" required />
+        <input name="youtubeUrl" placeholder="YouTube URL" required />
+        <input type="file" name="image" />
+        <button type="submit">Add Sermon</button>
+      </form>
+      <ul id="sermon-list"></ul>
+    </section>
+
+    <script>
+      function authHeader() {
+        const t = localStorage.getItem('adminToken');
+        return t ? { 'Authorization': 'Bearer ' + t } : {};
+      }
+
+      document.getElementById('logout').addEventListener('click', () => {
+        localStorage.removeItem('adminToken');
+        window.location.href = '/admin/login';
+      });
+
+      async function loadSermons() {
+        const res = await fetch('/api/admin/sermons', { headers: authHeader() });
+        if (!res.ok) return;
+        const list = await res.json();
+        const ul = document.getElementById('sermon-list');
+        ul.innerHTML = '';
+        list.forEach(s => {
+          const li = document.createElement('li');
+          li.textContent = s.title + ' — ' + s.youtubeUrl;
+          ul.appendChild(li);
+        });
+      }
+
+      document.getElementById('sermon-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const fd = new FormData(form);
+        const res = await fetch('/api/admin/sermons', { method: 'POST', headers: authHeader(), body: fd });
+        if (res.ok) {
+          form.reset();
+          loadSermons();
+        } else if (res.status === 401) {
+          window.location.href = '/admin/login';
+        }
+      });
+
+      loadSermons();
+    </script>
+  </body>
+</html>
