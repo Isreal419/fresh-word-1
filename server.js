@@ -150,15 +150,6 @@ app.get('/about', (req, res) => {
 res.render('about');
 });
 
-// Admin pages (simple)
-app.get('/admin/login', (req, res) => {
-  res.render('admin-login', { adminEmail: process.env.ADMIN_EMAIL || '' });
-});
-
-app.get('/admin/dashboard', (req, res) => {
-  res.render('admin-dashboard');
-});
-
 // Sermons Page
 app.get('/sermons', (req, res) => {
 res.render('sermons');
@@ -191,7 +182,7 @@ res.status(404).render('404');
 // SERVER
 // =======================
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 6000;
 
 if (require.main === module) {
   app.listen(PORT, () => {

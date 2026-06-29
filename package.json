@@ -7,9 +7,7 @@
     "dev": "nodemon server.js",
     "deploy": "vercel --prod"
   },
-  "vercel": {
-    "buildCommand": "npm run build"
-  },
+ 
   "dependencies": {
     "serverless-http": "^3.0.0",
     "body-parser": "^2.2.2",
